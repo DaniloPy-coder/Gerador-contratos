@@ -93,7 +93,7 @@ export default function Page() {
 
       URL.revokeObjectURL(url);
     } catch (error) {
-      alert("Erro de rede ao gerar o PDF.");
+      console.error("Erro ao baixar o PDF:", error);
     } finally {
       setLoading(false);
     }
