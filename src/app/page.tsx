@@ -167,7 +167,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto bg-white mt-8 p-6 rounded-xl shadow">
           <h2 className="text-xl font-semibold mb-4 text-gray-600">Contrato Gerado</h2>
 
-          <div ref={contractRef}>
+          <div ref={contractRef} id="print-area">
             <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">
               {`
 CONTRATO DE PRESTAÇÃO DE SERVIÇOS
@@ -197,6 +197,24 @@ Ambas as partes se comprometem a manter em sigilo todas as informações confide
 
 Cláusula 8ª - Foro  
 Para dirimir quaisquer controvérsias oriundas deste contrato, fica eleito o foro da comarca de ${form.local}, com renúncia a qualquer outro. E, por estarem assim justos e contratados, firmam o presente contrato em duas vias de igual teor.
+
+Cláusula 9ª - Responsabilidade Civil  
+O contratado será responsável por eventuais danos causados ao contratante decorrentes de dolo ou negligência comprovada na execução dos serviços.
+
+Cláusula 10ª - Propriedade Intelectual  
+Todos os materiais, produtos ou resultados gerados durante a prestação dos serviços serão de propriedade do contratante, salvo acordo prévio por escrito.
+
+Cláusula 11ª - Subcontratação  
+O contratado não poderá transferir ou subcontratar total ou parcialmente os serviços objeto deste contrato sem autorização prévia e por escrito do contratante.
+
+Cláusula 12ª - Comunicação entre as Partes  
+Toda e qualquer comunicação relacionada a este contrato deverá ser feita por escrito e enviada aos endereços de e-mail fornecidos pelas partes no momento da assinatura.
+
+Cláusula 13ª - Caso Fortuito e Força Maior  
+As partes não serão responsabilizadas por eventuais falhas no cumprimento das obrigações aqui pactuadas quando decorrentes de caso fortuito ou força maior, nos termos do artigo 393 do Código Civil.
+
+Cláusula 14ª - Validade  
+Se qualquer cláusula deste contrato for considerada inválida ou inexequível por um tribunal competente, as demais cláusulas permanecerão em pleno vigor e efeito.
 
 ${form.local}, ${dataHoje}
 
