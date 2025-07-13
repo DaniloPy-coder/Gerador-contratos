@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 interface FormData {
   contratante: string;
@@ -31,17 +31,6 @@ export default function Page() {
     dataFim: "",
   });
 
-  // Carrega dados do localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("contratoForm");
-    if (saved) setForm(JSON.parse(saved));
-  }, []);
-
-  // Salva no localStorage
-  useEffect(() => {
-    localStorage.setItem("contratoForm", JSON.stringify(form));
-  }, [form]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const name = e.target.name as keyof FormData;
     const value = e.target.value;
@@ -60,6 +49,19 @@ export default function Page() {
     }
 
     setShowContrato(true);
+
+    setForm((prev) => ({
+      ...prev,
+      contratante: "",
+      cpfContratante: "",
+      contratado: "",
+      cpfContratado: "",
+      local: "",
+      servico: "",
+      valor: "",
+      dataInicio: "",
+      dataFim: "",
+    }));
   };
 
   const exportPDF = async () => {
