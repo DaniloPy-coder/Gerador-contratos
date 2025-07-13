@@ -49,19 +49,6 @@ export default function Page() {
     }
 
     setShowContrato(true);
-
-    setForm((prev) => ({
-      ...prev,
-      contratante: "",
-      cpfContratante: "",
-      contratado: "",
-      cpfContratado: "",
-      local: "",
-      servico: "",
-      valor: "",
-      dataInicio: "",
-      dataFim: "",
-    }));
   };
 
   const exportPDF = async () => {
